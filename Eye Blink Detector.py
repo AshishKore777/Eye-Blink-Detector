@@ -108,7 +108,6 @@ while True:
   if fileStream and not vs.more():
     break
   
-
   try:
     frame = vs.read()
     frame = imutils.resize(frame, width=450)
@@ -134,7 +133,6 @@ while True:
       if ear < EYE_AR_THRESH:
         COUNTER += 1
       else:
-
         if COUNTER >= EYE_AR_CONSEC_FRAMES:
           TOTAL += 1
 
@@ -148,9 +146,7 @@ while True:
   except:
     pass
 
-      
 print("Number of Eye blinks in the video:",TOTAL)
 # do a bit of cleanup
 cv2.destroyAllWindows()
 vs.stop()
-
